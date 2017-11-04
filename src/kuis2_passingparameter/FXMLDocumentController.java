@@ -8,10 +8,10 @@ package kuis2_passingparameter;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -32,32 +32,35 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private JFXTextField nama;
     @FXML
-    private JFXPasswordField pass;
-    String username, password;
-    @FXML
     private JFXButton proses;
     public String user="zahra";
     public String passw="123";
     @FXML
+    private JFXPasswordField pass;
+    String username, password;
+
+
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
+
+    @FXML
     private void login(ActionEvent event) {
-     
-        
         username=nama.getText();
         password=pass.getText();
-       // tampilUser.setText(username);
-       // tampilPass.setText(password);
         
-        if(username.equalsIgnoreCase(user) && password.equalsIgnoreCase(passw)){
+         if(username.equalsIgnoreCase(user) && password.equalsIgnoreCase(passw)){
         try {
-            // Hide this current window (if this is what you want)
+            
             ((Node)(event.getSource())).getScene().getWindow().hide();
             
-            // Load the new fxml
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource("barang.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 830, 450);
-            
-            // Create new stage (window), then set the new Scene
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.setTitle("Zahra Camp");
@@ -67,20 +70,7 @@ public class FXMLDocumentController implements Initializable {
             System.out.println("Failed to create new Window." + e);
         }
         }
+
     }
-        @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
     
-    }
 }
-       
-
-    /**
-     * Initializes the controller class.
-     */
-         
-
-    
-    
-
