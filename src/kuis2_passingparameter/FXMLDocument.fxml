@@ -26,12 +26,18 @@
          <font>
             <Font size="15.0" />
          </font></Label>
-      <Label layoutX="97.0" layoutY="183.0" prefHeight="27.0" prefWidth="78.0" text="Password">
+      <Label layoutX="98.0" layoutY="168.0" prefHeight="27.0" prefWidth="78.0" text="Password">
          <font>
             <Font size="15.0" />
          </font></Label>
-      <JFXTextField fx:id="nama" layoutX="201.0" layoutY="112.0" />
-      <JFXButton fx:id="proses" layoutX="137.0" layoutY="265.0" onAction="#login" prefHeight="31.0" prefWidth="182.0" style="-fx-background-color: #c9e2e5;" text="LOG IN" />
-      <JFXPasswordField fx:id="pass" layoutX="201.0" layoutY="181.0" />
+      <JFXTextField fx:id="nama" layoutX="219.0" layoutY="113.0" />
+      <JFXButton fx:id="proses" layoutX="128.0" layoutY="295.0" onAction="#login" prefHeight="31.0" prefWidth="182.0" style="-fx-background-color: #c9e2e5;" text="LOG IN" />
+      <JFXPasswordField fx:id="pass" layoutX="219.0" layoutY="166.0" />
+      <Label layoutX="98.0" layoutY="221.0" text="Nama Penyewa">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="sewa" layoutX="219.0" layoutY="216.0" />
     </children>
 </AnchorPane>
